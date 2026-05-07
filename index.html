@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Store | IDLEB X</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-brand">🛡️ CyberSec Store</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">الرئيسية</a>
+            <a href="tools.html">🛠️ الأدوات</a>
+            <a href="design-request.html">🎨 تصميم مواقع</a>
+            <a href="ban-service.html">🔒 خدمات الباند</a>
+            <a href="recharge.html">💰 شحن رصيد</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- قسم الترحيب -->
+        <section class="hero">
+            <div class="profile-card glass-effect">
+                <div class="profile-img">
+                    <img src="https://i.postimg.cc/JnL7fBvr/IMG-20260430-084401-176.jpg" alt="Profile Picture" id="profile-pic">
+                </div>
+                <h1>المهندس <span class="highlight">أمن سيبراني</span></h1>
+                <p class="title">🔐 مبرمج | مطوير أدوات | خبير اختراق أخلاقي</p>
+                <div class="social-links">
+                    <a href="#" class="social-link telegram">📱 Telegram</a>
+                    <a href="#" class="social-link whatsapp">📞 WhatsApp</a>
+                    <a href="#" class="social-link email">✉️ Email</a>
+                </div>
+                <div class="contact-info">
+                    <p>📧 idlebxx2@gmail.com</p>
+                    <p>📱 +963969061988</p>
+                </div>
+            </div>
+            
+            <div class="info-card glass-effect">
+                <h2>✨ من أنا</h2>
+                <p>مبرمج ومهندس أدوات سايبر سكيورتي مع خبرة <strong>5+ سنوات</strong> في تطوير المواقع والأدوات الأمنية.</p>
+                <div class="skills">
+                    <h3>🛠️ المهارات:</h3>
+                    <div class="skills-tags">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>SQL</span>
+                        <span>Bash</span>
+                        <span>Network Security</span>
+                    </div>
+                </div>
+                <div class="services-offered">
+                    <h3>📦 ماذا أقدم:</h3>
+                    <ul>
+                        <li>✅ أدوات اختبار الاختراق المخصصة</li>
+                        <li>✅ تصميم وبرمجة مواقع احترافية</li>
+                        <li>✅ خدمات فك الباند لجميع المنصات</li>
+                        <li>✅ استشارات وحماية أمنية</li>
+                        <li>✅ تطوير بوتات تليجرام متقدمة</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- إحصائيات -->
+        <section class="stats">
+            <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <p>أداة مطورة</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="120">0</div>
+                <p>مشروع موقع</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="98">0</div>
+                <p>رضا العملاء</p>
+                <small>%</small>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="300">0</div>
+                <p>عميل سعيد</p>
+            </div>
+        </section>
+
+        <!-- المنتجات المميزة -->
+        <section class="featured-products">
+            <h2>🔥 أحدث المنتجات</h2>
+            <div class="products-grid" id="featured-products"></div>
+        </section>
+
+        <!-- شهادات العملاء -->
+        <section class="testimonials">
+            <h2>💬 آراء العملاء</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"أفضل مهندس تعاملت معه، أدواته احترافية وسريعة"</p>
+                    <h4>- أحمد محمد</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"خدمة ممتازة، فك الباند تم خلال 24 ساعة فقط"</p>
+                    <h4>- سارة خالد</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"موقع احترافي وسعر مناسب، أنصح بالتعامل معه"</p>
+                    <h4>- محمود علي</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 CyberSec Store - جميع الحقوق محفوظة</p>
+        <p>🔒 التعاملات آمنة وخاصة تماماً</p>
+    </footer>
+
+    <script src="3d-background.js"></script>
+    <script src="script.js"></script>
+</body>
+  </html>
