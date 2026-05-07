@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الباند - CyberSec Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <nav class="navbar">
+        <div class="nav-brand">🔒 CyberSec Store</div>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="tools.html">🛠️ الأدوات</a>
+            <a href="design-request.html">🎨 تصميم مواقع</a>
+            <a href="ban-service.html" class="active">🔒 خدمات الباند</a>
+            <a href="recharge.html">💰 شحن رصيد</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>🔒 خدمات فك الباند والاسترجاع</h1>
+            <p>استعد حسابك المحظور بأسرع وقت وبضمان 100%</p>
+        </div>
+
+        <!-- بطاقات الخدمات -->
+        <div class="services-cards">
+            <div class="service-card" data-service="instagram">
+                <div class="service-icon">📷</div>
+                <h3>فك باند انستقرام</h3>
+                <p>استرجاع الحسابات المحظورة أو المقيدة</p>
+                <div class="service-features">
+                    <span>✅ ضمان 30 يوم</span>
+                    <span>⚡ خلال 24 ساعة</span>
+                    <span>🔒 تام</span>
+                </div>
+                <div class="service-price" id="insta-price">جاري التحميل...</div>
+                <button class="select-service" data-service="instagram">اختر الخدمة</button>
+            </div>
+
+            <div class="service-card" data-service="facebook">
+                <div class="service-icon">📘</div>
+                <h3>فك باند فيسبوك</h3>
+                <p>حل مشكلة الحظر الدائم والمؤقت</p>
+                <div class="service-features">
+                    <span>✅ ضمان 60 يوم</span>
+                    <span>⚡ خلال 48 ساعة</span>
+                    <span>🔒 تام</span>
+                </div>
+                <div class="service-price" id="fb-price">جاري التحميل...</div>
+                <button class="select-service" data-service="facebook">اختر الخدمة</button>
+            </div>
+
+            <div class="service-card" data-service="tiktok">
+                <div class="service-icon">🎵</div>
+                <h3>فك باند تيك توك</h3>
+                <p>استعادة حسابك المحظور من تيك توك</p>
+                <div class="service-features">
+                    <span>✅ ضمان 30 يوم</span>
+                    <span>⚡ خلال 24 ساعة</span>
+                    <span>🔒تام</span>
+                </div>
+                <div class="service-price" id="tt-price">جاري التحميل...</div>
+                <button class="select-service" data-service="tiktok">اختر الخدمة</button>
+            </div>
+
+            <div class="service-card" data-service="youtube">
+                <div class="service-icon">📺</div>
+                <h3>رفع حظر يوتيوب</h3>
+                <p>استرجاع القنوات المحظورة من يوتيوب</p>
+                <div class="service-features">
+                    <span>✅ ضمان 90 يوم</span>
+                    <span>⚡ خلال 72 ساعة</span>
+                    <span>🔒 تام</span>
+                </div>
+                <div class="service-price" id="yt-price">جاري التحميل...</div>
+                <button class="select-service" data-service="youtube">اختر الخدمة</button>
+            </div>
+        </div>
+
+        <!-- نموذج الطلب -->
+        <div class="ban-form glass-effect" id="ban-form" style="display: none;">
+            <div class="form-header">
+                <h2>📝 طلب فك الباند</h2>
+                <button class="close-btn" onclick="closeForm()">✖️</button>
+            </div>
+            <form id="ban-request-form">
+                <div class="form-group">
+                    <label>نوع الخدمة</label>
+                    <input type="text" id="service-type" readonly class="readonly-input">
+                </div>
+                <div class="form-group">
+                    <label>💰 السعر المتفق عليه</label>
+                    <input type="text" id="service-price" readonly class="readonly-input">
+                </div>
+                <div class="form-group">
+                    <label>🔗 رابط الحساب المحظور *</label>
+                    <input type="url" id="account-url" required placeholder="https://www.instagram.com/username">
+                </div>
+                <div class="form-group">
+                    <label>📧 البريد الإلكتروني المسجل *</label>
+                    <input type="email" id="account-email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label>📱 رقم الجوال المسجل</label>
+                    <input type="tel" id="account-phone" placeholder="مثال: 96171234567">
+                </div>
+                <div class="form-group">
+                    <label>💬 سبب الحظر (إن وجد)</label>
+                    <textarea id="ban-reason" rows="3" placeholder="اذكر سبب الحظر إذا كنت تعرفه..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>📞 رقم واتساب للتواصل *</label>
+                    <input type="tel" id="whatsapp-number" required placeholder="مثال: 96171234567">
+                    <small>سيتم التواصل معك عبر هذا الرقم لتسليم الحساب</small>
+                </div>
+                <div class="form-group">
+                    <label>📝 ملاحظات إضافية</label>
+                    <textarea id="additional-notes" rows="3" placeholder="أي معلومات إضافية تريد إضافتها..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">📤 إرسال الطلب</button>
+            </form>
+        </div>
+
+        <!-- شروط الخدمة -->
+        <div class="terms-box">
+            <h3>📋 شروط الخدمة</h3>
+            <ul>
+                <li>يتم الدفع المبلغ كامل قبل الاستلام</li>
+                <li>ضمان استرجاع كامل المبلغ في حال الفشل</li>
+                <li>مدة الخدمة تختلف حسب نوع الحظر</li>
+                <li>البيانات خاصة ولن يتم مشاركتها مع أي جهة</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 CyberSec Store - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="3d-background.js"></script>
+    <script src="script.js"></script>
+</body>
+                  </html>
