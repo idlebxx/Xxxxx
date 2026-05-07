@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأدوات - CyberSec Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <nav class="navbar">
+        <div class="nav-brand">🛠️ CyberSec Store</div>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="tools.html" class="active">🛠️ الأدوات</a>
+            <a href="design-request.html">🎨 تصميم مواقع</a>
+            <a href="ban-service.html">🔒 خدمات الباند</a>
+            <a href="recharge.html">💰 شحن رصيد</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>🛠️ أدوات الأمن السيبراني</h1>
+            <p>أدوات احترافية لاختبار الاختراق والحماية</p>
+        </div>
+
+        <!-- فلتر البحث -->
+        <div class="filter-section">
+            <input type="text" id="searchTools" placeholder="🔍 ابحث عن أداة..." class="search-input">
+            <select id="categoryFilter" class="filter-select">
+                <option value="all">الكل</option>
+                <option value="network">أدوات الشبكات</option>
+                <option value="web">أدوات الويب</option>
+                <option value="mobile">أدوات الجوال</option>
+                <option value="crypto">أدوات التشفير</option>
+            </select>
+        </div>
+
+        <!-- عرض المنتجات -->
+        <div class="products-grid" id="tools-container"></div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 CyberSec Store - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="3d-background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
