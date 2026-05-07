@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شحن الرصيد - CyberSec Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <nav class="navbar">
+        <div class="nav-brand">💰 CyberSec Store</div>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="tools.html">🛠️ الأدوات</a>
+            <a href="design-request.html">🎨 تصميم مواقع</a>
+            <a href="ban-service.html">🔒 خدمات الباند</a>
+            <a href="recharge.html" class="active">💰 شحن رصيد</a>
+            <a href="admin.html" class="admin-btn">👑 المدير</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>💰 شحن الرصيد</h1>
+            <p>اشحن رصيدك بسهولة عبر شام كاش</p>
+        </div>
+
+        <div class="recharge-container">
+            <!-- معلومات الشحن -->
+            <div class="recharge-info glass-effect">
+                <h2>📱 طريقة الشحن عبر شام كاش</h2>
+                <div class="payment-details">
+                    <div class="payment-card">
+                        <h3>رقم محفظة شام كاش:</h3>
+                        <div class="phone-number" id="shamCashNumber">e6b15e5dcb1934930754fc5a27b983a9</div>
+                        <button onclick="copyNumber()" class="copy-btn">📋 نسخ الرقم</button>
+                    </div>
+                    
+                    <div class="steps">
+                        <h3>📝 خطوات الشحن:</h3>
+                        <ol>
+                            <li>افتح تطبيق شام كاش</li>
+                            <li>اختر "تحويل للأرقام"</li>
+                            <li>أدخل الرقم: <strong>e6b15e5dcb1934930754fc5a27b983a9</strong></li>
+                            <li>أدخل المبلغ الذي تريد شحنه</li>
+                            <li>اكتب سبب التحويل: "شحن رصيد"</li>
+                            <li>أكمل عملية التحويل</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نموذج تأكيد الشحن -->
+            <div class="confirm-form glass-effect">
+                <h2>✅ تأكيد عملية الشحن</h2>
+                <form id="recharge-form">
+                    <div class="form-group">
+                        <label>💰 المبلغ المحول ($)</label>
+                        <input type="number" id="amount" required placeholder="مثال: 50" step="10" min="10">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>🆔 معرف العملية من شام كاش</label>
+                        <input type="text" id="transaction-id" required placeholder="أدخل رقم العملية">
+                    </div>
+
+                    <div class="form-group">
+                        <label>📸 صورة إيصال التحويل *</label>
+                        <input type="file" id="screenshot" accept="image/*" required>
+                        <small>يرجى رفع صورة واضحة لعملية التحويل</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>📞 رقم واتساب للتواصل *</label>
+                        <input type="tel" id="whatsapp-number" required placeholder="مثال: 96171234567">
+                        <small>سيتم التواصل معك عبر هذا الرقم للتأكيد</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>📧 البريد الإلكتروني (اختياري)</label>
+                        <input type="email" id="email" placeholder="example@email.com">
+                    </div>
+
+                    <button type="submit" class="submit-btn">🔄 تأكيد الشحن</button>
+                </form>
+            </div>
+
+            <!-- أسعار الباقات -->
+            <div class="packages-section">
+                <h2>🎁 باقات شحن مخصصة</h2>
+                <div class="packages-grid">
+                    <div class="package-card" onclick="selectAmount(50)">
+                        <h3>باقة فضية</h3>
+                        <div class="price">$50</div>
+                        <p>مناسبة لشراء أداة واحدة</p>
+                    </div>
+                    <div class="package-card" onclick="selectAmount(100)">
+                        <h3>باقة ذهبية</h3>
+                        <div class="price">$100</div>
+                        <p>احصل على 10% هدية</p>
+                    </div>
+                    <div class="package-card" onclick="selectAmount(200)">
+                        <h3>باقة بلاتينية</h3>
+                        <div class="price">$200</div>
+                        <p>احصل على 15% هدية</p>
+                    </div>
+                    <div class="package-card" onclick="selectAmount(500)">
+                        <h3>باقة VIP</h3>
+                        <div class="price">$500</div>
+                        <p>احصل على 25% هدية + استشارة مجانية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 CyberSec Store - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="3d-background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
